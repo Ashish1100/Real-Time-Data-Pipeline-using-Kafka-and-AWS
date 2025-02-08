@@ -1,0 +1,28 @@
+#!/bin/bash
+# Kafka 3.6.0 installation and AWS MSK IAM configuration
+
+# 1. Install Java prerequisite
+sudo yum -y install java-11
+
+# 2. Download and extract Kafka
+wget https://archive.apache.org/dist/kafka/3.6.0/kafka_2.13-3.6.0.tgz
+tar -xzf kafka_2.13-3.6.0.tgz
+
+# 3. Add AWS MSK IAM authentication library
+cd kafka_2.13-3.6.0/libs
+wget https://github.com/aws/aws-msk-iam-auth/releases/download/v1.1.1/aws-msk-iam-auth-1.1.1-all.jar
+
+# 4. Configure client properties
+cd ../bin
+cat > client.properties << EOF
+security.protocol=SASL_SSL
+sasl.mechanism=AWS_MSK_IAM
+sasl.jaas.config=software.amazon.msk.auth.iam.IAMLoginModule required;
+sasl.client.callback.handler.class=software.amazon.msk.auth.iam.IAMClientCallbackHandler
+EOF
+
+# 5. Consumer test command (replace placeholders)
+"To test consumption: "bin/kafka-console-consumer.sh --bootstrap-server <BOOTSTRAP_SERVER> --consumer.config client.properties --topic <TOPIC_NAME> --from-beginning"
+
+# 6. Topic creation command (replace placeholders)
+"To create topics:" "bin/kafka-topics.sh --create --bootstrap-server <BOOTSTRAP_SERVER> --command-config client.properties --replication-factor 3 --partitions 1 --topic <TOPIC_NAME>"
