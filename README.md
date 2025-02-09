@@ -1,4 +1,4 @@
-# Real-Time Data Pipeline using Apache Kafka and AWS Services
+# Real-Time Data Pipeline using Apache Kafka and AWS
 
 [![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)](https://aws.amazon.com)
 [![Kafka](https://img.shields.io/badge/Apache_Kafka-231F20?style=for-the-badge&logo=apache-kafka&logoColor=white)](https://kafka.apache.org/)
