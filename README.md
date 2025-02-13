@@ -25,7 +25,7 @@ This solution is well suited for applications that require real‑time data inge
 - **Amazon MSK**: Managed Kafka cluster (3 brokers)
 - **Debezium Connector**: Real-time change capture
 - **S3 Connector**: Parquet writer with hourly partitioning
-- **EC2**: Operational monitoring instance (optional)
+- **EC2**: Operational monitoring instance
 
 ## Prerequisites
 - AWS Account with IAM permissions for:
