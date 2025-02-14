@@ -112,10 +112,10 @@ Refer to:
 ### Step 7: Create the Source Connector
 Follow step-by-step instructions provided in your repository or tutorial video to configure and launch this connector. It will pull CDC events from SQL Server RDS into a Kafka topic.
 
-### Step 8: Create an EC2 Instance for Data Verification (Optional)
+### Step 8: Create an EC2 Instance for Data Verification
 Launch an EC2 instance with an attached IAM role (`IAM/ecRole.json`) to install Kafka tools. This instance can be used to verify that data is being published correctly into Kafka topics.
 
-### Step 9: Verify Data in Kafka Topic (Optional)
+### Step 9: Verify Data in Kafka Topic
 Install Kafka on your EC2 instance using instructions in `kafka/kafka_commands.txt`. Use console consumer commands to check messages in your Kafka topic.
 
 ### Step 10: Create S3 Sink Connector
