@@ -10,7 +10,6 @@ This solution is well suited for applications that require real‑time data inge
 
 **Key Features**:
 - 🚀 Millisecond-latency event processing
-- 🔒 IAM authentication & TLS encryption
 - 📈 Horizontally scalable Kafka architecture
 - 🔄 Automated CDC capture with Debezium
 
