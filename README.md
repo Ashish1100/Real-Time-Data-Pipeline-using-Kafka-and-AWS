@@ -17,7 +17,7 @@ This solution is well suited for applications that require real‑time data inge
 ![System Architecture](https://github.com/Ashish1100/Real-Time-Data-Pipeline-using-Kafka-and-AWS/blob/8f9c784b505d51c21ecfe4f07dbb1cc559413318/Documents/Architecture.png)
 
 **Data Flow**:
-1. SQL Server CDC → 2. Debezium Source Connector → 3. Amazon MSK → 4. S3 Sink Connector → 5. Data Lake
+1. SQL Server CDC → 2. Debezium Source Connector → 3. Amazon MSK → 4. S3 Sink Connector → 5. Data Lake (S3)
 
 **Core Components**:
 - **RDS SQL Server**: CDC-enabled source database
